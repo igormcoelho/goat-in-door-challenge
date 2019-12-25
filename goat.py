@@ -17,6 +17,9 @@ for i in range(turns):
     ##print("play1 ", play1_bet)
     ##print("play2 ", play2_bet)
 
+    # if WIN_IMMEDIATE, calculate and finish already the game
+    # not doing this...
+
     #time to open door with no goat
     doors = list(range(1,4))
     doors.remove(goat)
@@ -37,7 +40,7 @@ for i in range(turns):
         
 
 # if goat cannot appear on first round, chance is 1/3 and 2/3=66.6%
-# if goat can appear (and win immediately), then chance is 1/3 and 4/3+1=77.7%
+# if goat can appear (and win immediately), then chance is 1/3 and (4/3+1)/3=77.7% (see WIN_IMMEDIATE option)
 
 print("player1 = ", player1_static_wins, " -> ",player1_static_wins/turns, '%')
 print("player2 = ", player2_dyn_wins, " -> ",player2_dyn_wins/turns, '%')
