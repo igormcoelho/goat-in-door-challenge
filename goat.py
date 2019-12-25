@@ -23,6 +23,7 @@ for i in range(turns):
     #time to open door with no goat
     doors = list(range(1,4))
     doors.remove(goat)
+    #doors.remove(play2_bet)    # play2 may select goat door... beware of exceptions!
     if goat != play2_bet:       # just avoid duplication of .remove() for same element
         doors.remove(play2_bet) # same bet as play1
     no_goat = doors[random.randint(0,len(doors)-1)]
